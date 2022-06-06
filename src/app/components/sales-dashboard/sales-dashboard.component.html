@@ -57,17 +57,17 @@
     <p-tabView>
         <p-tabPanel header="Dealership">
            <div class="tabContentHolder">
-               <app-dealership></app-dealership>
+               <app-dealership [selectedView]="selectedView"></app-dealership>
            </div>
         </p-tabPanel>
         <p-tabPanel header="Sales">
             <div class="tabContentHolder">
-                <app-sale #sale></app-sale>
+                <app-sale [selectedView]="selectedView"></app-sale>
             </div>
         </p-tabPanel>
         <p-tabPanel header="Service">
             <div class="tabContentHolder">
-                <app-service></app-service>
+                <app-service [selectedView]="selectedView"></app-service>
             </div>
         </p-tabPanel>
     </p-tabView>

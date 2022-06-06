@@ -11,6 +11,10 @@ import { SaleComponent } from './sales-dashboard/sale/sale.component';
 import { GridViewComponent } from './sales-dashboard/sale/grid-view/grid-view.component';
 import { GridGraphViewComponent } from './sales-dashboard/sale/grid-graph-view/grid-graph-view.component';
 import { GraphViewComponent } from './sales-dashboard/sale/graph-view/graph-view.component';
+
+import { DealershipGridViewComponent } from './sales-dashboard/dealership/grid-view/grid-view.component';
+import { DealershipGridGraphViewComponent } from './sales-dashboard/dealership/grid-graph-view/grid-graph-view.component';
+import { DealershipGraphViewComponent } from './sales-dashboard/dealership/graph-view/graph-view.component';
 import {AccordionModule} from 'primeng/accordion';
 import {TableModule} from 'primeng/table';
 import {InputSwitchModule} from 'primeng/inputswitch';
@@ -26,7 +30,11 @@ import {ChartModule} from 'primeng/chart';
     SaleComponent,
     GridViewComponent,
     GridGraphViewComponent,
-    GraphViewComponent
+    GraphViewComponent,
+    DealershipGridViewComponent,
+    DealershipGridGraphViewComponent,
+    DealershipGraphViewComponent
+
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sale',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  selectedView = 0;
   constructor() { }
+
+  @Input() selectedView: any;
 
   ngOnInit(): void {
   }

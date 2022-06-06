@@ -1,56 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-grid-graph-view',
+  selector: 'app-dealership-grid-graph-view',
   templateUrl: './grid-graph-view.component.html',
   styleUrls: ['./grid-graph-view.component.scss']
 })
-export class GridGraphViewComponent implements OnInit {
+export class DealershipGridGraphViewComponent implements OnInit {
   summary = [
     {
-      title: 'Retail Unit',
+      title: 'New Retail',
     },
     {
       title: 'Fleet/Non-Retail',
     },
     {
-      title: 'Front',
-    },
-    {
-      title: 'Back',
-    },
-    {
-      title: 'Total (no Incentive)',
-    },
-    {
-      title: 'Incentive',
-    },
-    {
-      title: 'Front',
-    },
-    {
-      title: 'Gross',
-    },
-    {
-      title: 'Pack',
-    },
-    {
-      title: 'Pack/Doc Fees',
-    },
-    {
-      title: 'Back',
-    },
-    {
-      title: 'Incentives',
+      title: 'Pre-owned Retail',
     },
     {
       title: 'Wholesale',
     },
     {
-      title: 'Gross before Adj',
+      title: 'New Retail',
+    },
+    {
+      title: 'Incentive',
+    },
+    {
+      title: 'Pre-owned Retail',
+    },
+    {
+      title: 'Wholesale/Fleet',
     },
     {
       title: 'Chargebacks',
+    },
+    {
+      title: 'New Deals',
+    },
+    {
+      title: 'New Deals aged',
+    },
+    {
+      title: 'Used Deals',
+    },
+    {
+      title: 'Used Deals Aged',
     },
   ];
   unitVal = [
@@ -171,6 +165,4 @@ export class GridGraphViewComponent implements OnInit {
       ]
   };
   }
-
 }
-

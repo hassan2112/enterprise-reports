@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { SaleComponent } from './sale/sale.component';
+import { DealershipComponent } from './dealership/dealership.component';
 
 @Component({
   selector: 'app-sales-dashboard',
@@ -7,23 +8,18 @@ import { SaleComponent } from './sale/sale.component';
   styleUrls: ['./sales-dashboard.component.scss']
 })
 export class SalesDashboardComponent implements OnInit {
-
-  @ViewChild('sale') saleComp!: SaleComponent;
+  selectedView = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   viewChanged(viewIndex: number) {
-    if(this.saleComp) this.saleComp.selectedView = viewIndex;
+    return this.selectedView = viewIndex
   }
 
   isActiveView(viewIndex: number) {
-    if(!this.saleComp && !viewIndex) return true
-    
-    if(this.saleComp )  
-    return this.saleComp.selectedView === viewIndex;
-    return false;
+    return this.selectedView === viewIndex
   }
 
 }
