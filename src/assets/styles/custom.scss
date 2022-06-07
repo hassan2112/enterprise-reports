@@ -1,6 +1,7 @@
 .btn{
     padding: .36rem .75rem;
-    min-height: 38px;
+    min-height: 36px;
+    line-height: 1.407;
 }
 
 .btn-outline-primary{
@@ -115,6 +116,10 @@
                 &:last-child{
                     border-right-width: 1px;
                 }
+                a{
+                    text-decoration: none;
+                color: var(--app-blue);
+                }
             }
             &:nth-child(2n+1){
                 background: var(--grid-odd-bg);
@@ -222,5 +227,105 @@
     .p-sidebar-content{
         padding: 0;
         height: 100vh;
+    }
+}
+.p-dropdown{
+    width: 100%;
+}
+.p-inputtext{
+    font-size: 1em;
+    color: var(--text-default);
+    padding-top: 0.407rem;
+    padding-bottom: 0.407rem;
+    border-color: var(--border-default);
+}
+
+.p-button{
+    font-size: 0.9285714285714286em;
+    color: var(--white);
+    gap: 0.5rem;max-height: 36px;
+    &.button-default{
+        color: var(--text-default);
+        background: #E3E7EF;
+        border-color: #E3E7EF;
+        .p-button-label{
+            display: none;
+        }
+        svg{
+            path[fill]{
+                fill: var(--text-default);
+            }
+            path[stroke]{
+                stroke: var(--text-default);
+            }
+        }
+        &:enabled:hover{
+            color: var(--text-default);
+            background: #d6d9df;
+            border-color: #d6d9df;
+        }
+    }
+    &.button-red{
+        color: var(--white);
+        background: #C40505;
+        border-color: #C40505;
+        .p-button-label{
+            display: none;
+        }
+        svg{
+            path[fill]{
+                fill: var(--white);
+            }
+            path[stroke]{
+                stroke: var(--white);
+            }
+        }
+        &:enabled:hover{
+            color: var(--white);
+            background: #C40505;
+            border-color: #C40505;
+        }
+    }
+    &.button-yellow{
+        color: var(--white);
+        background: #F7B731;
+        border-color: #F7B731;
+        .p-button-label{
+            display: none;
+        }
+        svg{
+            path[fill]{
+                fill: var(--white);
+            }
+            path[stroke]{
+                stroke: var(--white);
+            }
+        }
+        &:enabled:hover{
+            color: var(--white);
+            background: #F7B731;
+            border-color: #F7B731;
+        }
+    }
+    &.button-green{
+        color: var(--white);
+        background: #32AD95;
+        border-color: #32AD95;
+        .p-button-label{
+            display: none;
+        }
+        svg{
+            path[fill]{
+                fill: var(--white);
+            }
+            path[stroke]{
+                stroke: var(--white);
+            }
+        }
+        &:enabled:hover{
+            color: var(--white);
+            background: #32AD95;
+            border-color: #32AD95;
+        }
     }
 }

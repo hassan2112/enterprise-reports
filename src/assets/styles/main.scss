@@ -26,7 +26,9 @@ body{
 .bg-yellow{
     background: var(--theme-yellow) !important;
 }
-
+.link{
+    color: var(--app-blue);
+}
 .text-red-ribbon{
     color: var(--theme-red-ribbon)  !important;
 }
@@ -160,4 +162,90 @@ body{
         font-weight: var(--weight-500);
         text-decoration: none;
     }
+}
+.form-icon-control{
+    position: relative;
+    display: flex;
+    align-items: center;
+    i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &.left{
+        i{
+            left: 0;
+        }
+        .p-inputtext{
+            padding-left: 3.5rem;
+        }
+    }
+    &.right{
+        i{
+            right: 0;
+        }
+        .p-inputtext{
+            padding-right: 3.5rem;
+        }
+    }
+}
+
+.toolBar{
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .p-inputtext{
+        width: 12rem;
+    }
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+.reportPanel{
+    .sideBarPanel {
+        .sideBarHead{
+            h4{
+                small{
+                    font-size: 0.875rem;
+                    color: var(--text-default);
+                }
+            }
+        }
+    }
+}
+
+.reportPanelSummaryBlockHolder{
+    .reportSummaryBlockSec{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .reportSummaryGridBlock{
+            flex: 0 0 450px;
+            max-width: 450px;
+        }
+        .reportSummaryGraphBlock{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .chartHolderSp{
+                width: 60%;
+            }
+        }
+    }
+    .reportSummaryListingGrid{
+        margin-top: 1rem;
+    }
+}
+.gridHead{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
 }

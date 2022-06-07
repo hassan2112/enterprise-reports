@@ -17,6 +17,12 @@
         }
         .graphBlockBody{
             min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .chartHolderSp{
+                width: 70%;
+            }
         }
     }
 }

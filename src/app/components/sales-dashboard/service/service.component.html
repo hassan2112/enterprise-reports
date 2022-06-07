@@ -1,8 +1,3 @@
-<div class="card">
-    <div class="card-header">
-        <h4>Summary - Day 18 of 31</h4>
-    </div>
-    <div class="card-body">
-        graph
-    </div>
-</div>
+<app-service-grid-graph-view *ngIf="selectedView === 0"></app-service-grid-graph-view>
+<app-service-grid-view *ngIf="selectedView === 1"></app-service-grid-view>
+<app-service-graph-view *ngIf="selectedView === 2"></app-service-graph-view>

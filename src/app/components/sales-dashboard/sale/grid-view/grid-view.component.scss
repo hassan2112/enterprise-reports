@@ -1,0 +1,20 @@
+.summaryGrid{
+    th{
+        &.gridSep{
+            background: transparent;
+            border-top: #fff;
+            border-bottom-color: #fff;
+            border-left: 1px solid #e9ecef;
+            border-right: 1px solid #e9ecef;
+        }
+    }
+    td{
+        &.gridSep{
+            background: #fff;
+            border-top: #fff;
+            border-bottom-color: #fff;
+            border-left: 1px solid #e9ecef;
+            border-right: 1px solid #e9ecef;
+        }
+    }
+}

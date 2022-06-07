@@ -20,6 +20,11 @@ import {TableModule} from 'primeng/table';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import {DropdownModule} from 'primeng/dropdown';
 import {ChartModule} from 'primeng/chart';
+import {SidebarModule} from 'primeng/sidebar';
+import {InputTextModule} from 'primeng/inputtext';
+import { ServiceGraphViewComponent } from './sales-dashboard/service/service-graph-view/service-graph-view.component';
+import { ServiceGridViewComponent } from './sales-dashboard/service/service-grid-view/service-grid-view.component';
+import { ServiceGridGraphViewComponent } from './sales-dashboard/service/service-grid-graph-view/service-grid-graph-view.component';
 
 
 @NgModule({
@@ -33,7 +38,10 @@ import {ChartModule} from 'primeng/chart';
     GraphViewComponent,
     DealershipGridViewComponent,
     DealershipGridGraphViewComponent,
-    DealershipGraphViewComponent
+    DealershipGraphViewComponent,
+    ServiceGraphViewComponent,
+    ServiceGridViewComponent,
+    ServiceGridGraphViewComponent
 
   ],
   imports: [
@@ -46,7 +54,9 @@ import {ChartModule} from 'primeng/chart';
     TableModule,
     InputSwitchModule,
     DropdownModule,
-    ChartModule
+    ChartModule,
+    SidebarModule,
+    InputTextModule
   ],
   exports: [
     SalesDashboardComponent

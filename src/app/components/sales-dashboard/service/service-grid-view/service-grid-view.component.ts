@@ -1,105 +1,135 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-grid-graph-view',
-  templateUrl: './grid-graph-view.component.html',
-  styleUrls: ['./grid-graph-view.component.scss']
+  selector: 'app-service-grid-view',
+  templateUrl: './service-grid-view.component.html',
+  styleUrls: ['./service-grid-view.component.scss']
 })
-export class GridGraphViewComponent implements OnInit {
-  
+export class ServiceGridViewComponent implements OnInit {
+
   unitSummaryPanel = false;
+  checked: boolean = false;
   summary = [
     {
-      title: 'Retail Unit',
+      title: 'New Retail',
     },
     {
       title: 'Fleet/Non-Retail',
     },
     {
-      title: 'Front',
-    },
-    {
-      title: 'Back',
-    },
-    {
-      title: 'Total (no Incentive)',
-    },
-    {
-      title: 'Incentive',
-    },
-    {
-      title: 'Front',
-    },
-    {
-      title: 'Gross',
-    },
-    {
-      title: 'Pack',
-    },
-    {
-      title: 'Pack/Doc Fees',
-    },
-    {
-      title: 'Back',
-    },
-    {
-      title: 'Incentives',
+      title: 'Pre-owned Retail',
     },
     {
       title: 'Wholesale',
     },
     {
-      title: 'Gross before Adj',
+      title: 'New Retail',
+    },
+    {
+      title: 'Incentive',
+    },
+    {
+      title: 'Pre-owned Retail',
+    },
+    {
+      title: 'Wholesale/Fleet',
     },
     {
       title: 'Chargebacks',
     },
+    {
+      title: 'New Deals',
+    },
+    {
+      title: 'New Deals aged',
+    },
+    {
+      title: 'Used Deals',
+    },
+    {
+      title: 'Used Deals Aged',
+    },
   ];
-  unitVal = [
+  fixedSummary = [
     {
-      title: '23',
+      title: "CP RO's",
     },
     {
-      title: '23',
+      title: "Warranty RO's",
     },
     {
-      title: '23',
+      title: "Internal RO's",
     },
     {
-      title: '23',
+      title: "Other RO's",
     },
     {
-      title: '23',
+      title: 'Service',
     },
     {
-      title: '23',
+      title: 'Parts',
     },
     {
-      title: '23',
+      title: '',
     },
     {
-      title: '23',
+      title: '',
     },
     {
-      title: '23',
+      title: '',
     },
     {
-      title: '23',
+      title: "CP RO's",
     },
     {
-      title: '23',
+      title: "Warranty RO's",
     },
     {
-      title: '23',
+      title: "Internal RO's",
     },
     {
-      title: '23',
+      title: "Other RO's",
+    },
+  ];
+  storeSummary = [
+    {
+      title: 'Fixed Gross',
     },
     {
-      title: '23',
+      title: 'F&I PVR',
     },
     {
-      title: '23',
+      title: 'Pre-Owned Gross',
+    },
+    {
+      title: '',
+    },
+    {
+      title: 'Variable Gross',
+    },
+    {
+      title: 'Wholesale/Fleet',
+    },
+    {
+      title: 'Chargebacks',
+    },
+    {
+      title: 'Fixed Gross',
+    },
+    {
+      title: '',
+    },
+    {
+      title: 'Pre-Fixed Expenses',
+    },
+    {
+      title: 'Pre-Fixed Net',
+    },
+    {
+      title: 'Pre-Fixed % of GP',
+    },
+    {
+      title: 'Fixed Expenses',
     },
   ];
   
@@ -227,7 +257,6 @@ export class GridGraphViewComponent implements OnInit {
   ];
   constructor() { }
   data: any;
-  lineData: any;
 
   chartOptions: any = {
     plugins: {
@@ -240,30 +269,6 @@ export class GridGraphViewComponent implements OnInit {
             },
             position: 'bottom',
         },
-    }
-};
-lineChartOptions: any = {
-    plugins: {
-        legend: {
-          
-          display: false,
-            labels: {
-                color: '#495057',
-            },
-            position: 'bottom',
-        },
-        scales: {
-          xAxes: [{
-            gridLines: {
-               display: false
-            }
-         }],
-         yAxes: [{
-            gridLines: {
-               display: false
-            }
-         }]
-      }
     }
 };
   config: any = {
@@ -320,71 +325,5 @@ lineChartOptions: any = {
           }
       ]
   };
-    this.lineData = {
-      labels: ['June'],
-      datasets: [
-          {
-              label: 'Sales',
-              data: [100],
-              backgroundColor: [
-                  "#f20414"
-              ],
-              maxBarThickness: 10,
-              borderRadius: 5,
-              // hoverBackgroundColor: [
-              //     "#FF6384",
-              //     "#36A2EB",
-              //     "#FFCE56",
-              // ]
-              borderWidth: 0,
-          },
-          {
-              label: 'Front Gross',
-              data: [50],
-              backgroundColor: [
-                  "#32AD95"
-              ],
-              maxBarThickness: 10,
-              borderRadius: 5,
-              // hoverBackgroundColor: [
-              //     "#FF6384",
-              //     "#36A2EB",
-              //     "#FFCE56",
-              // ]
-              borderWidth: 0,
-          },
-          {
-              label: 'Back Gross',
-              data: [30],
-              backgroundColor: [
-                  "#F96A26"
-              ],
-              maxBarThickness: 10,
-              borderRadius: 5,
-              // hoverBackgroundColor: [
-              //     "#FF6384",
-              //     "#36A2EB",
-              //     "#FFCE56",
-              // ]
-              borderWidth: 0,
-          }
-      ],
-    options: {
-      scales: {
-        x: {
-           grid: {
-              display: false
-           }
-        },
-        y: {
-           grid: {
-              display: false
-           }
-        }
-   }
-    }
-  };
   }
-
 }
-

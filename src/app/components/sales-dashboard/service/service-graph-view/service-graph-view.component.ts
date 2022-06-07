@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dealership-graph-view',
-  templateUrl: './graph-view.component.html',
-  styleUrls: ['./graph-view.component.scss']
+  selector: 'app-service-graph-view',
+  templateUrl: './service-graph-view.component.html',
+  styleUrls: ['./service-graph-view.component.scss']
 })
-export class DealershipGraphViewComponent implements OnInit {
+export class ServiceGraphViewComponent implements OnInit {
 
   constructor() { }
   data: any;
@@ -78,5 +78,4 @@ export class DealershipGraphViewComponent implements OnInit {
       ]
   };
   }
-
 }
