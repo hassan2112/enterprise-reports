@@ -9,6 +9,52 @@ header{
             line-height: 2.125rem;
             padding-left: 1rem;
             padding-right: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            &.active{
+                background-color: var(--app-red);
+                color: var(--white);
+            }
+            i{
+                color: var(--text-default);
+                font-size: 0.875em;
+                
+            display: flex;
+            align-items: center;
+            }
+        }
+        .nav-item{
+            .dropdown-menu{
+                display: none;
+                padding:0;
+                width: 15rem;
+                li{
+                    a{
+                        color: var(--text-default);
+            line-height: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            font-size: 14px;
+            &.active{
+                background-color: var(--app-red);
+                color: var(--white);
+            }
+                    }
+                    &+li{
+                        border-top: 1px solid var(--border-default);
+                    }
+                }
+            }
+            &:hover{
+                .dropdown-menu{
+                    
+                display: flex;
+                flex-direction: column;
+                }
+            }
         }
         .container-fluid{
             padding-right: 0;

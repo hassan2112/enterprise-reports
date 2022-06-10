@@ -9,10 +9,10 @@ const routes: Routes = [
     path: 'dashboard', component: SalesDashboardComponent
   },
   {
-    path: 'weekly-forecast', component: WeeklyForecastComponent
+    path: 'forcast/weekly-forecast', component: WeeklyForecastComponent
   },
   {
-    path: 'store-summary', component: StoreSummaryComponent
+    path: 'summary/store-summary', component: StoreSummaryComponent
   },
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
 ];

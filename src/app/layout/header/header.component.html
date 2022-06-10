@@ -7,8 +7,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item" *ngFor="let nav of navigation">
-            <a class="nav-link active" aria-current="page" href="{{nav.href}}">{{ nav.title }}</a>
+          <li *ngFor="let nav of navigation" class="nav-item">
+            <a [class]="routeLink === nav.href ? 'nav-link active' : 'nav-link'" aria-current="page" href="{{nav.href}}">{{ nav.title }}
+              <i *ngIf="nav.subNav"  [class]="nav.subNav ? 'pi pi-chevron-down' : 'pi pi-chevron-down'"></i>
+            </a>
+            <ul *ngIf="nav.subNav" class="dropdown-menu">
+              <li  *ngFor="let subNav of nav.subNav"><a [class]="routeLink === subNav.href ? 'nav-link active' : 'nav-link'" href="{{subNav.href}}">{{subNav.title}} </a></li>
+            </ul>
           </li>
         </ul>
         <!-- <form class="d-flex" role="search">
