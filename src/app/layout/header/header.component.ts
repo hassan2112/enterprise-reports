@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,37 +10,16 @@ export class HeaderComponent implements OnInit {
   navigation: any[] = [
     {
       title: 'Sales Dashboard',
+      href: 'dashboard',
     },
     {
-      title: 'Customers',
+      title: 'weekly-forecast',
+      href:'weekly-forecast'
     },
     {
-      title: 'Desklog',
-    },
-    {
-      title: 'Inventory',
-    },
-    {
-      title: 'Sales Logs',
-    },
-    {
-      title: 'Budget Listing',
-    },
-    {
-      title: 'Dealer Trades',
-    },
-    {
-      title: 'Outside F&I Sales',
-    },
-    {
-      title: 'Customers Concerns',
-    },
-    {
-      title: 'CSI',
-    },
-    {
-      title: 'Reports',
-    },
+      title: 'Store Summary',
+      href:'store-summary'
+    }
   ];
 
   constructor() { }

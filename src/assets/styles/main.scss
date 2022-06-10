@@ -57,6 +57,13 @@ body{
                     }
                 }
             }
+            .p-datatable-thead {
+                > tr {
+                    > th:first-child{
+                        text-align: left;
+                    }
+                }
+            }
         }
 }
 
@@ -200,8 +207,11 @@ body{
     display: flex;
     gap: 1rem;
     align-items: center;
-    .p-inputtext{
-        width: 12rem;
+    .form-icon-control{
+        width: 15rem;
+        >:first-child{
+            width:100%;
+        }
     }
 }
 

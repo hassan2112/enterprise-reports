@@ -1,0 +1,10 @@
+.chartTrandingHolder{
+    display:flex;
+    gap:2rem;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-wrap:wrap;
+    .lineChart{
+        width:calc(30% - 2rem);
+    }
+}

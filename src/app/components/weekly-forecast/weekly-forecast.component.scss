@@ -1,0 +1,217 @@
+.weeklyForecastGrid {
+  ::ng-deep {
+    .p-datatable {
+      table-layout:fixed;
+      .p-datatable-thead {
+        >tr {
+          &.monthHead {
+            > th {
+              background: transparent;
+              margin: 0;
+              font-size: 1rem;
+              color: var(--text-dark);
+              font-weight: var(--weight-500);
+              border-bottom: 1px solid var(--border-default);
+              &.gridSep{
+                  border: 0;
+              }
+              &:first-child{
+                  background: var(--white);
+                  border:0;
+                  border-right: 0;
+                  padding-right: 1.5rem;
+              }
+                &.currentSticky{
+                  background: var(--white);
+                }
+            }
+          }
+          >th{
+            &.gridSep {
+                background: var(--white);
+                border-top: #fff;
+                border-bottom-color: #fff;
+                border-left: 1px solid #e9ecef;
+                border-right: 1px solid #e9ecef;
+              }
+              &:first-child{
+                  background: var(--white);
+                  border:0;
+                  border-right: 1px solid #e9ecef;
+                  text-align: right;
+                  padding-right: 1.5rem;
+                  position: sticky;
+                  left: 0;
+              }
+              &.currentSticky{
+                position: sticky;
+                right: 0;
+                z-index: 10;
+                &.secondLastChild{
+                  right:166.5px;
+                }
+                &.thirdLastChild{
+                  right:332.5px;
+                  &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    border-left: 1px solid #fff;
+                  }
+                }
+                &.currentStickyGridSep{
+                  right:499px;
+                  border: 0;
+                }
+              }
+              
+              &.lastScrollableColumn{
+                border-right: 1px solid #fff;
+              }
+          }
+
+          &.trSep {
+            >th {
+                background: var(--white);
+              border:0 !important;
+            }
+          }
+        }
+      }
+      .p-datatable-tbody {
+        > tr {
+          
+          &:nth-child(2n+1){
+            > td{
+              background: var(--grid-odd-bg);
+            }
+          }
+            &.headRow{
+                >td{
+                    
+                    background-color: var(--highlighted-row);
+                    color: var(--white);
+                    &:first-child{
+                        font-weight: var(--weight-600);
+                      color: var(--text-dark);
+                    }
+                }
+            }
+            &.total{
+                >td{
+                    background-color: var(--theme-red-ribbon);
+                    color: var(--white);
+                    &:first-child{
+                        font-weight: var(--weight-600);
+                        color: var(--theme-red-ribbon);
+                    }
+                }
+            }
+            &.yellowTr{
+                >td{
+                    background-color: var(--theme-yellow);
+                    color: var(--white);
+                    &:first-child{
+                        font-weight: var(--weight-600);
+                        color: var(--theme-yellow);
+                    }
+                }
+            }
+            &.orangeTr{
+                >td{
+                    background-color: var(--theme-orange);
+                    color: var(--white);
+                    &:first-child{
+                        font-weight: var(--weight-600);
+                        color: var(--theme-orange);
+                    }
+                }
+            }
+            &.purpleTr{
+                >td{
+                    background-color: var(--theme-purple);
+                    color: var(--white);
+                    &:first-child{
+                        font-weight: var(--weight-600);
+                        color: var(--theme-purple);
+                    }
+                }
+            }
+            > td{
+                background: var(--white);
+                &.gridSep {
+                    background: var(--white);
+                    border-top: #fff;
+                    border-bottom-color: #fff;
+                    border-left: 1px solid #e9ecef;
+                    border-right: 1px solid #e9ecef;
+                  }
+                  &:first-child{
+                      background: var(--white);
+                      border:0;
+                      border-right: 1px solid #e9ecef;
+                      text-align: right;
+                      padding-right: 1.5rem;
+                      white-space: nowrap;
+                      position: sticky;
+                      left: 0;
+                  }
+                  
+              &.currentSticky{
+                position: sticky;
+                right: 0;
+                z-index: 10;
+                &.secondLastChild{
+                  right:166.5px;
+                }
+                &.thirdLastChild{
+                  right:332.5px;
+                  &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    border-left: 1px solid #e9ecef;
+                  }
+                }
+                &.currentStickyGridSep{
+                  right:499px;
+                  border: 0;
+                }
+              }
+              &.lastScrollableColumn{
+                border-right: 1px solid #e9ecef;
+              }
+            }
+            &.trSep {
+              >td {
+                background: var(--white);
+                border:0 !important;
+              }
+            }
+        }
+      }
+      .p-datatable-wrapper{
+        overflow-x: auto;
+        overflow-y: inherit;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.width-first-column{
+  width: 200px !important;
+}
+.width-two-column{
+  width: 300px !important;
+}
+.width-three-column{
+  width: 450px !important;
+}
+.width-one-column{
+  width: 150px !important;
+}

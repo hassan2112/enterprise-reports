@@ -1,0 +1,370 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="summaryGrid">
+                    <p-table [value]="profitPace" responsiveLayout="scroll">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="2" class="text-start">Tracking</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Amount</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-profitPace>
+                            <tr>
+                                <td>Budget Gross</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Gross Tracking</td>
+                                <td>876,145</td>
+                            </tr>
+                            <tr>
+                                <td>Net Profit Tracking</td>
+                                <td>105,363</td>
+                            </tr>
+                            <tr>
+                                <td>Net Profit %</td>
+                                <td>12 %</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="summaryGrid">
+                    <p-table [value]="profitPace" responsiveLayout="scroll">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="3" class="text-start">Cash Alerts</th>
+                            </tr>
+                            <tr>
+                                <th>Variable Receivables</th>
+                                <th>Count</th>
+                                <th>Balance</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-profitPace>
+                            <tr>
+                                <td><a class="cursor-pointer">Contracts in Transit (8 + days)</a></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a class="cursor-pointer">Wholesale (31 + days)</a></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a class="cursor-pointer">Payoffs (10 + days)</a></td>
+                                <td>62</td>
+                                <td>-9,789</td>
+                            </tr>
+                            <tr>
+                                <td><a class="cursor-pointer">We Owe (31 + days)</a></td>
+                                <td>62</td>
+                                <td>-9,789</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="summaryGrid mt-4">
+                    <p-table [value]="profitPaces" responsiveLayout="scroll"  dataKey="id">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="18" class="text-start">Vehicle Inventory Alerts</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" class="bg-red-ribbon text-center">New</th><th class="gridSep"></th>
+                                <th colspan="2" class="bg-purple">Certified</th><th class="gridSep"></th>
+                                <th colspan="2" class="bg-green">Non-Certified</th><th class="gridSep"></th>
+                                <th colspan="2" class="bg-red">Other Makes</th><th class="gridSep"></th>
+                                <th colspan="2" class="bg-orange">Total Pre-Owned</th><th class="gridSep"></th>
+                                <th colspan="2" class="bg-yellow">Trade-In Vehicle</th>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                                <th class="gridSep"></th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                                <th class="gridSep"></th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                                <th class="gridSep"></th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                                <th class="gridSep"></th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                                <th class="gridSep"></th>
+                                <th width="135">Units</th>
+                                <th width="135">Potential Amt</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product let-expanded="expanded">
+                            <tr [ngClass]="{ highlightedRow: product.isHeader }">
+                              <td>{{
+                                product.category
+                              }}
+                              </td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                              <td class="gridSep"></td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                              <td class="gridSep"></td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                              <td class="gridSep"></td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                              <td class="gridSep"></td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                              <td class="gridSep"></td>
+                              <td>{{ product.unit }}</td>
+                              <td>{{ product.potential }}</td>
+                            </tr>
+                          </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="summaryGrid mt-4">
+                    <p-table [value]="varSummary" responsiveLayout="scroll"  dataKey="id">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="24" class="text-start">Variable Summary - Day 18 of 31</th>
+                            </tr>
+                            <tr>
+                                <th colspan="9" class="bg-red-ribbon text-center">Unit</th><th class="gridSep"></th>
+                                <th colspan="9" class="bg-purple">Gross</th><th class="gridSep"></th>
+                                <th colspan="3" class="bg-green">Per Vehicle</th><th class="gridSep"></th>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <th>Not Final</th>
+                                <th>Final</th>
+                                <th>MTD</th>
+                                <th>Tracking</th>
+                                <th>Forecast</th>
+                                <th>Var</th>
+                                <th>Last Year</th>
+                                <th>Var</th>
+
+                                <th class="gridSep"></th>
+
+                                <th>Pack</th>
+                                <th>Not Final</th>
+                                <th>Final</th>
+                                <th>MTD</th>
+                                <th>Tracking</th>
+                                <th>Forecast</th>
+                                <th>Var</th>
+                                <th>Last Year</th>
+                                <th>Var</th>
+
+                                <th class="gridSep"></th>
+
+                                <th>MTD</th>
+                                <th>Forecast</th>
+                                <th>Last Year</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-varSummary let-expanded="expanded">
+                            <tr [ngClass]="[varSummary.isHeader ? 'highlightedRow' : '', varSummary.isTotal ? 'total' : '', varSummary.isOrange ? 'orangeTr' : '', varSummary.isYellow ? 'yellowTr' : '', varSummary.isPurple ? 'purpleTr' : '' ]">
+                              <td>{{
+                                varSummary.category
+                              }}
+                              <a
+          *ngIf="varSummary.isToggler"
+          [pRowToggler]="varSummary"
+          class="trToggleTrigger"
+          
+        ><i [class]="expanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"></i></a>
+                              </td>
+                              <td>{{ varSummary.notFinal }}</td>
+                              <td>{{ varSummary.final }}</td>
+                              <td>{{ varSummary.mtd }}</td>
+                              <td>{{ varSummary.tracking }}</td>
+                              <td>{{ varSummary.forecast }}</td>
+                              <td>{{ varSummary.var }}</td>
+                              <td>{{ varSummary.lastYear }}</td>
+                              <td>{{ varSummary.lastYearVar }}</td>
+                              <th class="gridSep"></th>
+                              <td>{{ varSummary.grossPack }}</td>
+                              <td>{{ varSummary.grossnotFinal }}</td>
+                              <td>{{ varSummary.grossfinal }}</td>
+                              <td>{{ varSummary.grossmtd }}</td>
+                              <td>{{ varSummary.grosstracking }}</td>
+                              <td>{{ varSummary.grossforecast }}</td>
+                              <td>{{ varSummary.grossvar }}</td>
+                              <td>{{ varSummary.grosslastYear }}</td>
+                              <td>{{ varSummary.grosslastYearVar }}</td>
+                              <th class="gridSep"></th>
+                              <td>{{ varSummary.pvMtd }}</td>
+                              <td>{{ varSummary.pvForecast }}</td>
+                              <td>{{ varSummary.pvLastYear }}</td>
+                            </tr>
+                          </ng-template>
+                            <ng-template pTemplate="rowexpansion" let-varSummary>
+                                
+                                <tr class="childRow" *ngFor="let preOwned of varSummary.preOwned">
+                                    <td>{{ preOwned.category }}
+                                    </td>
+                                    <td>{{ preOwned.notFinal }}</td>
+                                    <td>{{ preOwned.final }}</td>
+                                    <td>{{ preOwned.mtd }}</td>
+                                    <td>{{ preOwned.tracking }}</td>
+                                    <td>{{ preOwned.forecast }}</td>
+                                    <td>{{ preOwned.var }}</td>
+                                    <td>{{ preOwned.lastYear }}</td>
+                                    <td>{{ preOwned.lastYearVar }}</td>
+                                    <th class="gridSep"></th>
+                                    <td>{{ preOwned.grossPack }}</td>
+                                    <td>{{ preOwned.grossnotFinal }}</td>
+                                    <td>{{ preOwned.grossfinal }}</td>
+                                    <td>{{ preOwned.grossmtd }}</td>
+                                    <td>{{ preOwned.grosstracking }}</td>
+                                    <td>{{ preOwned.grossforecast }}</td>
+                                    <td>{{ preOwned.grossvar }}</td>
+                                    <td>{{ preOwned.grosslastYear }}</td>
+                                    <td>{{ preOwned.grosslastYearVar }}</td>
+                                    <th class="gridSep"></th>
+                                    <td>{{ preOwned.pvMtd }}</td>
+                                    <td>{{ preOwned.pvForecast }}</td>
+                                    <td>{{ preOwned.pvLastYear }}</td>
+                                </tr>
+                            </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mt-3">
+                <div class="summaryGrid">
+                    <p-table [value]="profitPace" responsiveLayout="scroll">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="9" class="text-start">Fixed Department Total</th>
+                            </tr>
+                            <tr class="highlightedRow">
+                                <th colspan="9" class="text-center">Gross</th>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <th>MTD</th>
+                                <th>Paced</th>
+                                <th>Forecast</th>
+                                <th>Var</th>
+                                <th>% of Forecast</th>
+                                <th>Last Year</th>
+                                <th>Var</th>
+                                <th>GP %</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-profitPace>
+                            <tr>
+                                <td>Service Total</td>
+                                <td>152,1551</td>
+                                <td>256,1989</td>
+                                <td>0</td>
+                                <td>256,156</td>
+                                <td>0.00%</td>
+                                <td>268.569</td>
+                                <td>-12,789</td>
+                                <td>79.47%</td>
+                            </tr>
+                            <tr>
+                                <td>Parts Total</td>
+                                <td>152,1551</td>
+                                <td>256,1989</td>
+                                <td>0</td>
+                                <td>256,156</td>
+                                <td>0.00%</td>
+                                <td>268.569</td>
+                                <td>-12,789</td>
+                                <td>79.47%</td>
+                            </tr>
+                            <tr class="total">
+                                <td>Fixed Total</td>
+                                <td>152,1551</td>
+                                <td>256,1989</td>
+                                <td>0</td>
+                                <td>256,156</td>
+                                <td>0.00%</td>
+                                <td>268.569</td>
+                                <td>-12,789</td>
+                                <td>79.47%</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mt-3">
+                <div class="summaryGrid">
+                    <p-table [value]="profitPace" responsiveLayout="scroll">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th colspan="6" class="text-start">Service Metrics</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>MTD</th>
+                                <th>Pace Est.</th>
+                                <th>Forecast</th>
+                                <th>Variance</th>
+                                <th>Opp.$$</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-profitPace>
+                            <tr>
+                                <td>CP Hours</td>
+                                <td>984</td>
+                                <td>1567</td>
+                                <td>0</td>
+                                <td>4896</td>
+                                <td>-205,156</td>
+                                </tr>
+                                <tr>
+                                <td>CP Hours Per RO</td><td>984</td>
+                                <td>1567</td>
+                                <td>0</td>
+                                <td>4896</td>
+                                <td>-205,156</td>
+                            </tr>
+                            <tr>
+                                <td>CP ELR</td><td>984</td>
+                                <td>1567</td>
+                                <td>0</td>
+                                <td>4896</td>
+                                <td>-205,156</td>
+                            </tr>
+                            <tr>
+                                <td>CP Parts to Labor Ratio</td><td>984</td>
+                                <td>1567</td>
+                                <td>0</td>
+                                <td>4896</td>
+                                <td>-205,156</td>
+                            </tr>
+                            <tr>
+                                <td>Parts Wholesale</td><td>984</td>
+                                <td>1567</td>
+                                <td>0</td>
+                                <td>4896</td>
+                                <td>-205,156</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

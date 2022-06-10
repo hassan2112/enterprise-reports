@@ -25,6 +25,11 @@ import {InputTextModule} from 'primeng/inputtext';
 import { ServiceGraphViewComponent } from './sales-dashboard/service/service-graph-view/service-graph-view.component';
 import { ServiceGridViewComponent } from './sales-dashboard/service/service-grid-view/service-grid-view.component';
 import { ServiceGridGraphViewComponent } from './sales-dashboard/service/service-grid-graph-view/service-grid-graph-view.component';
+import { WeeklyForecastComponent } from './weekly-forecast/weekly-forecast.component';
+import { StoreSummaryComponent } from './store-summary/store-summary.component';
+import { StoreMonthlySummaryComponent } from './store-summary/store-monthly-summary/store-monthly-summary.component';
+import { StoreTrendingComponent } from './store-summary/store-trending/store-trending.component';
+import { StoreInventoryComponent } from './store-summary/store-inventory/store-inventory.component';
 
 
 @NgModule({
@@ -41,7 +46,12 @@ import { ServiceGridGraphViewComponent } from './sales-dashboard/service/service
     DealershipGraphViewComponent,
     ServiceGraphViewComponent,
     ServiceGridViewComponent,
-    ServiceGridGraphViewComponent
+    ServiceGridGraphViewComponent,
+    WeeklyForecastComponent,
+    StoreSummaryComponent,
+    StoreMonthlySummaryComponent,
+    StoreTrendingComponent,
+    StoreInventoryComponent
 
   ],
   imports: [

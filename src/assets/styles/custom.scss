@@ -101,6 +101,13 @@
                 font-weight: var(--weight-500);
                 padding: 0.2rem 0.5rem;
             }
+            
+            &.highlightedRow{
+                th{
+                    background: var(--highlighted-row);
+                    color: var(--white);
+                }
+            }
         }
     }
     .p-datatable-tbody {
@@ -118,7 +125,15 @@
                 }
                 a{
                     text-decoration: none;
-                color: var(--app-blue);
+                color: var(--app-link);
+                cursor:pointer;
+                }
+                .trToggleTrigger{
+                    color: var(--text-dark);
+                    margin: 0 0.5rem;
+                    i{
+                        font-size: 0.875em;
+                    }
                 }
             }
             &:nth-child(2n+1){
@@ -127,6 +142,35 @@
             &.highlightedRow{
                 td{
                     background: var(--highlighted-row);
+                    color: var(--white);
+                }
+            }
+            &.childRow{
+                > td{
+                    background: #f1f1f1;
+                }
+            }
+            &.total{
+                >td{
+                    background-color: var(--theme-red-ribbon);
+                    color: var(--white);
+                }
+            }
+            &.yellowTr{
+                >td{
+                    background-color: var(--theme-yellow);
+                    color: var(--white);
+                }
+            }
+            &.orangeTr{
+                >td{
+                    background-color: var(--theme-orange);
+                    color: var(--white);
+                }
+            }
+            &.purpleTr{
+                >td{
+                    background-color: var(--theme-purple);
                     color: var(--white);
                 }
             }
