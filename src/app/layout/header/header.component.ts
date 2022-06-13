@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   settingPanel = false;
+  isParent = false;
   routeLink = window.location.pathname.replace(/\//,'');
   navigation: any[] = [
     {
@@ -66,5 +67,5 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+  
 }

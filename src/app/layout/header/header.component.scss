@@ -55,6 +55,15 @@ header{
                 flex-direction: column;
                 }
             }
+            &.active{
+                > .nav-link{
+                    background-color: var(--app-red);
+                    color: var(--white);
+                    i{
+                        color: var(--white);
+                    }
+                }
+            }
         }
         .container-fluid{
             padding-right: 0;

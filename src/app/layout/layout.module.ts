@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
 import { PageHeadComponent } from './page-head/page-head.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PageHeadComponent } from './page-head/page-head.component';
   imports: [
     CommonModule,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
