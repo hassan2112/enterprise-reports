@@ -259,3 +259,134 @@ body{
     align-items: center;
     padding: 0.5rem 0;
 }
+
+.userAvatar{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: var(--app-blue);
+    color: var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-style:normal;
+    font-size: 11px;
+}
+
+
+// .go-down,
+// .go-up {
+//   cursor: pointer;
+//   height: 14px;
+//   display: inline-block;
+//   text-align: center;
+//   font-size: 10px;
+//   z-index: 100;
+//   text-decoration: none;
+//   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+// }
+
+.go-down {
+  -webkit-animation: go-down 2s ease-in-out infinite;
+  -moz-animation: go-down 2s ease-in-out infinite;
+  animation: go-down 2s ease-in-out infinite;
+}
+
+.go-up {
+  transform: rotate(135deg);
+  -webkit-animation: go-up 2s ease-in-out infinite;
+  -moz-animation: go-up 2s ease-in-out infinite;
+  animation: go-up 2s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+
+@-webkit-keyframes go-down {
+    0% {
+      -webkit-transform: translate(0, -8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0, 8px);
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes go-down {
+    0% {
+      -moz-transform: translate(0, -8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -moz-transform: translate(0, 8px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes go-down {
+    0% {
+      transform: translate(0, -8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 8px);
+      opacity: 0;
+    }
+  }
+  
+  
+  /*animated scroll arrow animation*/
+  
+  @-webkit-keyframes go-up {
+    0% {
+      -webkit-transform: translate(0, 8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0, -8px);
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes go-up {
+    0% {
+      -moz-transform: translate(0, 8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -moz-transform: translate(0, -8px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes go-up {
+    0% {
+      transform: translate(0, 8px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, -8px);
+      opacity: 0;
+    }
+  }
+  
+  
+  /* animated up and down arrow */

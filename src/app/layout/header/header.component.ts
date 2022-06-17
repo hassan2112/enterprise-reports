@@ -57,6 +57,10 @@ export class HeaderComponent implements OnInit {
     {
       title: 'Enterprises',
       href:'javascript:void(0);'
+    },
+    {
+      title: 'Receivables',
+      href:'receivables'
     }
   ];
 

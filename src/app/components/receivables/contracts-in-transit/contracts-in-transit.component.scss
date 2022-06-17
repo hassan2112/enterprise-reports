@@ -1,0 +1,185 @@
+.summaryGrid{
+    th{
+        &.gridSep{
+            background: transparent;
+            border-top: #fff;
+            border-bottom-color: #fff;
+            border-left: 1px solid #e9ecef;
+            padding: 0;
+        }
+    }
+    td{
+        &.gridSep{
+            background: #fff;
+            border-top: #fff;
+            border-bottom-color: #fff;
+            border-left: 1px solid #e9ecef;
+            padding: 0;
+        }
+    }
+}
+
+.dealCommentSec{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 1rem;
+    .dealCommentBlock{
+        width: auto;
+        font-size:0;
+        p{
+            
+        background: #cee9ff;
+        border-radius: 5px;
+        padding: 0.5em;
+            font-size: 12px;
+            margin: 0;
+            display: inline-block;
+        }
+        span{
+            font-size: 11px;
+            color: var(--text-dark);
+        }
+    }
+}
+
+.userInfoSec{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+.totalBar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.topBarSp{
+    margin: -1rem -1rem 0 -1rem;
+    padding:1rem;
+    background: var(--bg-light-default);
+}
+
+.salesInfoSec{
+    p{
+        margin:0;
+        color: var(--text-dark);
+        font-size:12px;
+        span{
+            color: var(--text-default);
+        }
+    }
+    .salesVehicleInfoBlockHolder{
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 2rem;
+        p{
+            flex: 0 0 calc(25% - 1.5rem);
+            max-width:  calc(25% - 1.5rem);
+        }
+    }
+    .salesInfoBlock{
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0 1rem;
+        justify-content: space-between;
+        h4{
+            background: var(--bg-light-default);
+            margin: 0 0 0.5rem 0;
+            padding: 0 0.5rem;
+            font-size: 14px;
+            font-weight: var(--weight-600);
+            line-height: 30px;
+            width:100%;
+        }
+        p{
+            flex: 0 0 calc(50% - 1rem);
+            max-width:  calc(50% - 1rem);
+            flex-direction:column;
+            display:flex;
+            border-bottom:1px solid var(--border-default);
+            padding: 0.5rem 0 ;
+        }
+    }
+}
+
+
+
+.salesDetailBlockHolder{
+    .salesDetailBlock{
+        h4{
+            margin: 0;
+    font-size: 1em;
+    background: var(--app-blue);
+    color: var(--white);
+    font-weight: var(--weight-500);
+    width:100%;
+    padding: 0.5rem;
+    border-bottom:1px solid var(--border-default);
+    border-radius: 5px 5px 0 0;
+        }
+        .salesInfoBlock{
+            margin:0.5rem 0 0 0;
+            gap:0;
+            justify-content: flex-start;
+            p{
+                flex: 0 0 calc(33.3333%);
+                max-width:  calc(33.33333%);
+                flex-direction: row;
+                border: 0;
+                padding:0.2rem 0.5rem;
+                gap: 0 0.2rem;
+                &:nth-child(6n+1){
+                    background: var(--bg-light-default);
+                }
+                &:nth-child(6n+2){
+                    background: var(--bg-light-default);
+                }
+                &:nth-child(6n+3){
+                    background: var(--bg-light-default);
+                }
+            }
+        }
+    }
+}
+
+.sealStatusHolder{
+    padding:0;
+    margin-top: 1rem;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.5rem;
+    h4{
+        margin: 0;
+font-size: 1em;
+background: var(--app-blue);
+color: var(--white);
+font-weight: var(--weight-500);
+width:100%;
+padding: 0.5rem;
+border-bottom:1px solid var(--border-default);
+border-radius: 5px 5px 0 0;
+    }
+    .dealStatusBlock{
+        padding:0.5rem;
+        border-radius: 5px;
+        background: var(--body-bg);
+        width:calc(33.333% - 1rem);
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span{
+                display: flex;
+            align-items: center;
+            }
+            p-inputSwitch{
+                font-size: 0;
+            }
+        }
+    }
+}

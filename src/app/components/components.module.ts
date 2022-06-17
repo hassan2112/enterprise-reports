@@ -30,6 +30,11 @@ import { StoreSummaryComponent } from './store-summary/store-summary.component';
 import { StoreMonthlySummaryComponent } from './store-summary/store-monthly-summary/store-monthly-summary.component';
 import { StoreTrendingComponent } from './store-summary/store-trending/store-trending.component';
 import { StoreInventoryComponent } from './store-summary/store-inventory/store-inventory.component';
+import { BenchmarkComponent } from './benchmark/benchmark.component';
+import { NcmComponent } from './benchmark/ncm/ncm.component';
+import { CustomComponent } from './benchmark/custom/custom.component';
+import { ReceivablesComponent } from './receivables/receivables.component';
+import { ContractsInTransitComponent } from './receivables/contracts-in-transit/contracts-in-transit.component';
 
 
 @NgModule({
@@ -51,7 +56,12 @@ import { StoreInventoryComponent } from './store-summary/store-inventory/store-i
     StoreSummaryComponent,
     StoreMonthlySummaryComponent,
     StoreTrendingComponent,
-    StoreInventoryComponent
+    StoreInventoryComponent,
+    BenchmarkComponent,
+    NcmComponent,
+    CustomComponent,
+    ReceivablesComponent,
+    ContractsInTransitComponent,
 
   ],
   imports: [

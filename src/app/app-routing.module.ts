@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SalesDashboardComponent } from './components/sales-dashboard/sales-dashboard.component';
 import { WeeklyForecastComponent } from './components/weekly-forecast/weekly-forecast.component';
 import { StoreSummaryComponent } from './components/store-summary/store-summary.component';
+import { ReceivablesComponent } from './components/receivables/receivables.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'summary/store-summary', component: StoreSummaryComponent
+  },
+  {
+    path: 'receivables', component: ReceivablesComponent
   },
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
 ];
